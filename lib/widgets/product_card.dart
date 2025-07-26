@@ -16,7 +16,6 @@ class ProductCard extends StatelessWidget {
         padding: const EdgeInsets.all(12),
         child: Row(
           children: [
-            // 🖼 Product Image
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image.asset(
@@ -29,7 +28,6 @@ class ProductCard extends StatelessWidget {
 
             const SizedBox(width: 16),
 
-            // 📋 Product Info
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

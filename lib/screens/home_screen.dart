@@ -21,7 +21,6 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 🔍 Search Bar
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               decoration: BoxDecoration(
@@ -40,7 +39,6 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // 📂 Category Tabs
             SizedBox(
               height: 40,
               child: ListView(
@@ -56,7 +54,6 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // 🛒 List of Products
             Expanded(
               child: ListView.builder(
                 itemCount: products.length,
@@ -69,29 +66,21 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
 
-      // 🔻 Bottom Navigation Bar
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.pink,
         unselectedItemColor: Colors.grey,
         items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home"
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart),
-            label: "Cart"
+            label: "Cart",
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "Profile"
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],
       ),
     );
   }
 
-  // ✅ Helper widget for Category tab
   Widget buildCategoryTab(String title, bool isSelected) {
     return Container(
       margin: const EdgeInsets.only(right: 12),
